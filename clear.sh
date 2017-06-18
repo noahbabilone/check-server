@@ -1,0 +1,1 @@
+php bin/console cache:clearphp bin/console cache:warmupphp bin/console assets:install --symlinkphp bin/console assetic:dumpchown -R www-data:www-data .php bin/console cache:clear --env=prodphp bin/console cache:warmup --env=prodphp bin/console assets:install --symlink --env=prodphp bin/console assetic:dump --env=prodchown -R www-data:www-data .
