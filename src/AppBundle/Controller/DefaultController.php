@@ -25,8 +25,11 @@ class DefaultController extends Controller
         if (($handle = fopen($filepath, 'r')) !== false) {
             if ($handle) {
                 while (($line = fgets($handle)) !== false) {
-//                    $logs  = explode("\r", $line);
+                    $logs  = explode("\r", $line);
+                    
+                    dump($logs);
                     $logs[] = $logs;
+                    dump($logs); die;
                 }
                 if (!feof($handle)) {
                     $this->setFlash("custom-alerts alert alert-danger fade in",
