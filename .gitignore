@@ -18,3 +18,5 @@
 /web/log/notifier.log
 .idea/
 .idea/*
+log/check.log
+clear.sh
