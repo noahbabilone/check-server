@@ -36,9 +36,12 @@ services:
     
     app.url.check:
         class: AppBundle\Service\CheckURL
-        
+    app.mailer:
+        class: AppBundle\Service\Mailer
+        arguments: ["@service_container"]    
     app.service.check:
         class: AppBundle\Service\ServiceCheck
         autowire: false
         arguments: 
             - "@service_container"
+            - "@app.mailer"
